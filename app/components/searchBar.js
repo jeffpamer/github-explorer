@@ -13,8 +13,8 @@ module.exports = React.createClass({
     },
 
     render: function() {
-        return <div>
-            <input type="text" ref="organizationName" />
+        return <div className='searchBar'>
+            <input type="text" ref="organizationName" placeholder="Organization Name" />
             <button ref="searchButton" onClick={this.onSubmit}>Search</button>
         </div>
     }

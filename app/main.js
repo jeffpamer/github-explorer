@@ -1,4 +1,4 @@
-require('./main.css');
+require('./main.scss');
 
 var React = window.React = require('react');
 var { routes } = require('./constants');
