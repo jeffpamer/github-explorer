@@ -130,6 +130,7 @@ body {
                 li {
                     padding: 2em;
                     border-bottom: 1px solid #efefef;
+                    position: relative;
 
                     .author {
                         display: inline-block;
@@ -140,8 +141,26 @@ body {
                         font-weight: bold;
                     }
 
+                    .commitDate {
+                        position: absolute;
+                        top: 2.8em;
+                        right: 2em;
+                        color: #6f6f6f;
+                    }
+
                     .commitMessage {
                         margin-top: 1em;
+                    }
+
+                    a {
+                        margin-top: 1em;
+                        display: block;
+                        width: 300px;
+                        text-decoration: none;
+                        font-size: 0.9em;
+                        color: #9f9f9f;
+                        text-overflow: ellipsis;
+                        font-style: italic;
                     }
                 }
             }
