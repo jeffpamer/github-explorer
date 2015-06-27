@@ -6,12 +6,21 @@ var repositoryListItem = React.createClass({
         actions.repository.fetchCommits(this.props.owner.login, this.props.name);
     },
 
+    renderMetaItem: function(icon, dataPoint) {
+        return <div className="metaItem">
+            <span className={`octicon octicon-${icon}`}></span>
+            <span className="dataPoint">{this.props[dataPoint]}</span>
+        </div>
+    },
+
     render: function() {
         return <li onClick={this.onClick}>
             <h3>{this.props.name}</h3>
             <div className="repoMeta">
-                <span className="octicon octicon-repo-forked"></span>
-                <span className="dataPoint">{this.props.forks}</span>
+                {this.renderMetaItem('repo-forked', 'forks')}
+                {this.renderMetaItem('star', 'stargazers_count')}
+                {this.renderMetaItem('eye', 'watchers')}
+                {this.renderMetaItem('bug', 'open_issues')}
             </div>
         </li>
     }

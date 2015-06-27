@@ -4,6 +4,7 @@ module.exports = new Baobab({
     repositories: [],
     commits: [],
     ui: {
-        
+        sort: 'forks',
+        repo: ''
     }
 });
