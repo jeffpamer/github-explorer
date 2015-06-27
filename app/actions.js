@@ -11,6 +11,15 @@ module.exports = {
                 stateTree.select('organization', 'repositories').push(response.data);
             });
         }
+    },
+
+    repository: {
+        fetchCommits: function(owner, repository) {
+            xr.get(routes.commits(owner, repository))
+            .then((response) => {
+                window.console.log(response.data);
+            });
+        }
     }
 
 };

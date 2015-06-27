@@ -52,6 +52,11 @@ body {
             padding: 0;
             border-bottom: 1px solid #efefef;
             border-top: 1px solid #fff;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #f3f3f3;
+            }
 
             h3 {
                 padding: 1em;
