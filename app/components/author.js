@@ -5,9 +5,10 @@ var author = React.createClass({
             backgroundImage: `url(${this.props.avatar_url})`
         } : {};
 
-        return <div className="author" style={style}>
-            {this.props.login}
-        </div>
+        return !this.props.login ? null :
+            <div className="author" style={style}>
+                {this.props.login}
+            </div>
     }
 
 });
