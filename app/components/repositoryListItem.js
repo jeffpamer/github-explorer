@@ -1,3 +1,4 @@
+var { branch } = require('baobab-react/higher-order');
 var actions = require('../actions');
 
 var repositoryListItem = React.createClass({
@@ -14,7 +15,8 @@ var repositoryListItem = React.createClass({
     },
 
     render: function() {
-        return <li onClick={this.onClick}>
+        var className = this.props.activeRepo === this.props.name ? 'active' : '';
+        return <li className={className} onClick={this.onClick}>
             <h3>{this.props.name}</h3>
             <div className="repoMeta">
                 {this.renderMetaItem('repo-forked', 'forks')}
@@ -27,4 +29,8 @@ var repositoryListItem = React.createClass({
 
 });
 
-module.exports = repositoryListItem;
+module.exports = branch(repositoryListItem, {
+    cursors: {
+        activeRepo: ['ui', 'repo']
+    }
+});
