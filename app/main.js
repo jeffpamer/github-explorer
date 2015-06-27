@@ -1,3 +1,5 @@
+require('./main.scss');
+
 var React = window.React = require('react');
 var { routes } = require('./constants');
 var SearchBar = require('./components/searchBar')

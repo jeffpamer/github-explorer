@@ -24,8 +24,8 @@ var config = {
           exclude: [nodeModulesPath]
         },
         {
-          test: /\.css$/,
-          loader: 'style!css'
+          test: /\.scss$/,
+          loader: 'style!css!sass?sourceMap'
         }
     ]
   },

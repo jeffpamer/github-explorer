@@ -1,0 +1,44 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #1f1f1f;
+
+    .searchBar {
+        background-color: #efefef;
+        border-bottom: 1px solid #dfdfdf;
+        line-height: 2em;
+        padding: 2em;
+
+        input {
+            padding: 1em;
+            width: 30em;
+            height: 3em;
+            font-size: 1.2em;
+            border: 1px solid #dfdfdf;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 0 1em;
+            width: 150px;
+            background-color: #1a4c7e;
+            color: #ffffff;
+            font-size: 1.2em;
+            line-height: 3em;
+            border-style: none;
+            border-radius: 4px;
+            margin-left: 1em;
+            cursor: pointer;
+        }
+    }
+}
