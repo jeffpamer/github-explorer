@@ -2,6 +2,8 @@ var React = window.React = require('react');
 var xhr = require('xr');
 var R = require('ramda');
 
+var { routes } = require('./constants');
+
 var App = React.createClass({
 
     getInitialState: function() {
@@ -11,7 +13,7 @@ var App = React.createClass({
     onSubmit: function() {
         var orgName = React.findDOMNode(this.refs.organizationName).value;
 
-        xhr.get(`https://api.github.com/orgs/${orgName}/repos`)
+        xhr.get(routes.repos(orgName))
         .then((response) => {
             this.setState({ repos: response.data });
         });
