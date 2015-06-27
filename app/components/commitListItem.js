@@ -1,8 +1,11 @@
+var Author = require('./author');
+
 var commitListItem = React.createClass({
 
     render: function() {
-        return <li>
-            {this.props.commit.message}
+        return <li className="commitListItem">
+            <Author {...this.props.author} />
+            <div className="commitMessage">{this.props.commit.message}</div>
         </li>
     }
 

@@ -17,6 +17,7 @@ module.exports = React.createClass({
 
     render: function() {
         return <div className='searchBar'>
+            <span className="octicon octicon-mark-github"></span>
             <input type="text" ref="organizationName" placeholder="Organization Name" onKeyUp={this.onKeyPress}/>
             <button ref="searchButton" onClick={this.onSubmit}>Search</button>
         </div>
