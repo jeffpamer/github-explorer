@@ -42,33 +42,57 @@ body {
         }
     }
 
-    .repositoryList {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+    .container {
 
-        li {
-            margin: 0;
-            padding: 0;
-            border-bottom: 1px solid #efefef;
-            cursor: pointer;
+        .repositoryListContainer {
+            width: 25%;
+            float: left;
 
-            &:hover {
-                background-color: #f6f6f6;
+            .repositoryList {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+                    border-bottom: 1px solid #efefef;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #f9f9f9;
+                    }
+
+                    h3 {
+                        padding: 1em;
+                        margin: 0;
+                    }
+
+                    .repoMeta {
+                        color: #3f3f3f;
+                        padding: 0 1em 1em;
+
+                        .octicon {
+                            color: #6f6f6f;
+                            margin-right: 0.75em;
+                        }
+                    }
+                }
             }
+        }
 
-            h3 {
-                padding: 1em;
-                margin-bottom: 0;
-            }
+        .commitListContainer {
+            float: left;
+            width: 75%;
 
-            .repoMeta {
-                color: #3f3f3f;
-                padding: 0 1em 1em;
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: #f9f9f9;
 
-                .octicon {
-                    color: #6f6f6f;
-                    margin-right: 0.75em;
+                li {
+                    padding: 1em;
                 }
             }
         }

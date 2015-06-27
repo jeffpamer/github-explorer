@@ -13,8 +13,10 @@ var App = React.createClass({
     render: function() {
         return <div>
             <SearchBar />
-            <RepositoryList />
-            <CommitList />
+            <div className="container">
+                <RepositoryList />
+                <CommitList />
+            </div>
         </div>
     }
 

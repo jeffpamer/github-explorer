@@ -13,9 +13,11 @@ var repositoryList = React.createClass({
 
     render: function() {
         window.console.log(this.props.repositories);
-        return <ul className='repositoryList'>
-            {this.renderRepositories()}
-        </ul>
+        return <div className="repositoryListContainer">
+            <ul className='repositoryList'>
+                {this.renderRepositories()}
+            </ul>
+        </div>
     }
 
 });
