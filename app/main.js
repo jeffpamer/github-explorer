@@ -1,11 +1,13 @@
 var React = window.React = require('react');
 
-module.exports = React.createClass({
+var App = React.createClass({
 
     render: function() {
         return (
-            <h1>Hello World!</h1>
+            <h1>Hello World.</h1>
         );
     }
 
-})
+});
+
+React.render(<App />, document.body);
