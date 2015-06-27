@@ -5,10 +5,11 @@ var stateTree = require('./stateTree');
 module.exports = {
 
     organization: {
-        fetchRepositories: function(orgName) {
-            xr.get(routes.repos(orgName))
+        fetchRepositories: function(org) {
+            xr.get(routes.repos(org))
             .then((response) => {
-                stateTree.select('organization', 'repositories').push(response.data);
+                stateTree.select('commits').set([]);
+                stateTree.select('repositories').set(response.data);
             });
         }
     },
@@ -17,7 +18,7 @@ module.exports = {
         fetchCommits: function(owner, repository) {
             xr.get(routes.commits(owner, repository))
             .then((response) => {
-                window.console.log(response.data);
+                stateTree.select('commits').set(response.data);
             });
         }
     }

@@ -6,6 +6,7 @@ var stateTree = require('./stateTree');
 
 var SearchBar = require('./components/searchBar')
 var RepositoryList = require('./components/repositoryList');
+var CommitList = require('./components/commitList');
 
 var App = React.createClass({
 
@@ -13,6 +14,7 @@ var App = React.createClass({
         return <div>
             <SearchBar />
             <RepositoryList />
+            <CommitList />
         </div>
     }
 

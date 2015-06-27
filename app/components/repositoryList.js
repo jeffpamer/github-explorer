@@ -22,6 +22,6 @@ var repositoryList = React.createClass({
 
 module.exports = branch(repositoryList, {
     cursors: {
-        repositories: ['organization', 'repositories']
+        repositories: ['repositories']
     }
 });
