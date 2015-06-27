@@ -41,4 +41,32 @@ body {
             cursor: pointer;
         }
     }
+
+    .repositoryList {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid #efefef;
+            border-top: 1px solid #fff;
+
+            h3 {
+                padding: 1em;
+                margin-bottom: 0;
+            }
+
+            .repoMeta {
+                color: #3f3f3f;
+                padding: 0 1em 1em;
+
+                .octicon {
+                    color: #6f6f6f;
+                    margin-right: 0.75em;
+                }
+            }
+        }
+    }
 }

@@ -1,15 +1,12 @@
 var xr = require('xr');
 var { routes } = require('../constants');
+var actions = require('../actions');
 
 module.exports = React.createClass({
 
     onSubmit: function() {
         var orgName = React.findDOMNode(this.refs.organizationName).value;
-
-        xr.get(routes.repos(orgName))
-        .then((response) => {
-            window.console.log(response.data);
-        });
+        actions.organization.fetchRepositories(orgName);
     },
 
     render: function() {
