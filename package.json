@@ -1,0 +1,20 @@
+{
+  "name": "github-explorer",
+  "version": "1.0.0",
+  "description": "Browse an organizations github projects and recent commits",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffpamer/github-explorer.git"
+  },
+  "author": "Jeff Pamer (jeff@mediumdivision.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffpamer/github-explorer/issues"
+  },
+  "homepage": "https://github.com/jeffpamer/github-explorer#readme"
+}
