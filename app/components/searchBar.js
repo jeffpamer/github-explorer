@@ -1,6 +1,13 @@
 var xr = require('xr');
 var { routes } = require('../constants');
 
+var stateTree = require('../stateTree');
+var repositoryCursor = stateTree.select('organization', 'repositories');
+
+repositoryCursor.on('update', () => {
+    window.console.log('repo updated!', repositoryCursor.get());
+});
+
 module.exports = React.createClass({
 
     onSubmit: function() {
@@ -8,7 +15,7 @@ module.exports = React.createClass({
 
         xr.get(routes.repos(orgName))
         .then((response) => {
-            window.console.log(response.data);
+            repositoryCursor.push(response.data);
         });
     },
 

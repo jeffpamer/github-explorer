@@ -30,6 +30,7 @@
     "webpack-dev-server": "^1.9.0"
   },
   "dependencies": {
+    "baobab": "^1.1.1",
     "http-proxy": "^1.11.1",
     "ramda": "^0.15.1",
     "react": "^0.13.3",
