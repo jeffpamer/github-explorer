@@ -16,7 +16,8 @@ Alternately, you should be able to run the application by simply opening `public
     - It is recommended to install webpack globally: `npm install webpack -g`
 3. Install remaining project dependencies: `npm install`
 
-To recompile all application files run `webpack`, to start-up the dev server run: `npm start`
+To recompile all application files run `webpack`.
+To start-up the dev server run: `npm start`
 
 ## Testing
 `npm test`
