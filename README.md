@@ -6,7 +6,7 @@ To run the application simply start a web server in the public directory. The
 basic node.js http server is recommended as a quick way to get started:
 `npm install -g http-server` then run `http-server` in `/public` and browse to `http://localhost:8080` (by default).
 
-Alternately, you should be able to run the application by simply opening `public/index.html` form your local file system, as long as your host system does not block outgoing XHR requests from local files.
+Alternately, you should be able to run the application by simply opening `public/index.html` from your local file system, as long as your host system does not block outgoing XHR requests from local files.
 
 ## Development Requirements
 1. [Node.js](http://nodejs.org/)
