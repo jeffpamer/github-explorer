@@ -1,3 +1,11 @@
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
 html {
     box-sizing: border-box;
 }
@@ -8,10 +16,13 @@ html {
 
 body {
     margin: 0;
-    background-color: #ffffff;
     font-family: sans-serif;
     font-size: 14px;
     color: #1f1f1f;
+    background-image: linear-gradient(
+        to right,
+        #485563, #29323c
+    );
 
     .searchBar {
 
@@ -22,8 +33,7 @@ body {
             color: #6f6f6f;
         }
 
-        background-color: #efefef;
-        border-bottom: 1px solid #dfdfdf;
+        background-color: #ffffff;
         line-height: 2em;
         padding: 2em;
 
@@ -39,7 +49,7 @@ body {
         button {
             padding: 0 1em;
             width: 150px;
-            background-color: #1a4c7e;
+            background-color: #29323c;
             color: #ffffff;
             font-size: 1.2em;
             line-height: 3em;
@@ -47,71 +57,91 @@ body {
             border-radius: 4px;
             margin-left: 1em;
             cursor: pointer;
+
+            &:hover {
+                background-color: #485563;
+            }
+        }
+
+        .sortContainer {
+            padding: 3em 1em;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: bold;
+
+            .octicon {
+                color: #6f6f6f;
+                font-size: 36px;
+                width: 36px;
+                text-align: center;
+                margin: 0 10px;
+                cursor: pointer;
+
+                &.active {
+                    color: #fb7262;
+                }
+            }
         }
     }
 
     .container {
 
         .repositoryListContainer {
-            width: 35%;
+            width: 20%;
             float: left;
-
-            .sortContainer {
-                padding: 1em;
-                font-weight: bold;
-                width: 100%;
-                text-align: center;
-
-                .octicon {
-                    color: #6f6f6f;
-                    font-size: 25px;
-                    width: 25px;
-                    text-align: center;
-                    margin: 0 5px;
-                    cursor: pointer;
-
-                    &.active {
-                        color: #da181e;
-                    }
-                }
-            }
 
             .repositoryList {
                 list-style-type: none;
-                margin: 0;
+                margin: 2em 0;
                 padding: 0;
+                border-radius: 0px 4px 4px 0px;
 
                 li {
+                    @include clearfix;
                     margin: 0;
                     padding: 0;
                     border-bottom: 1px solid #efefef;
                     cursor: pointer;
+                    background-color: #ffffff;
 
-                    &.active, &:hover {
+                    &:first-child {
+                        border-radius: 0px 4px 0px 0px;
+                    }
+
+                    &:last-child {
+                        border-radius: 0px 0px 4px 0px;
+                    }
+
+                    &:nth-child(odd) {
                         background-color: #f9f9f9;
+                    }
+
+                    &:hover  {
+                        background-color: #f6f6f6;
+                    }
+
+                    &.active {
+                        background-color: #fb7262;
+                        color: #ffffff;
                     }
 
                     h3 {
                         padding: 1em;
                         margin: 0;
-                        display: block;
+                        float: left;
+                        clear: left;
                     }
 
                     .repoMeta {
-                        color: #3f3f3f;
-                        padding: 0 1em 1em;
-                        text-align: right;
+                        padding: 1.2em;
+                        float: right;
 
                         .metaItem {
                             display: inline-block;
-                            background-color: #f9f9f9;
-                            border-radius: 4px;
-                            margin-right: 5px;
-                            padding: 0.5em;
                         }
 
                         .octicon {
-                            color: #6f6f6f;
                             margin-right: 0.5em;
                         }
                     }
@@ -121,18 +151,27 @@ body {
 
         .commitListContainer {
             float: left;
-            width: 65%;
+            width: 80%;
+            padding: 2em;
 
             ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
-                background-color: #f9f9f9;
 
                 li {
                     padding: 2em;
+                    background-color: #f9f9f9;
                     border-bottom: 1px solid #efefef;
                     position: relative;
+
+                    &:first-child {
+                        border-radius: 4px 4px 0px 0px;
+                    }
+
+                    &:last-child {
+                        border-radius: 0px 0px 4px 4px;
+                    }
 
                     .author {
                         display: inline-block;

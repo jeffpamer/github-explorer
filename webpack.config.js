@@ -6,7 +6,10 @@ var mainPath = path.resolve(__dirname, 'app', 'main.js');
 
 var config = {
   devtool: 'eval',
-  entry: [mainPath],
+  entry: [
+    'webpack/hot/dev-server',
+    'webpack-dev-server/client?http://localhost:8080',
+    mainPath],
   output: {
     path: buildPath,
     filename: 'bundle.js',
@@ -26,7 +29,6 @@ var config = {
     ]
   },
   plugins: [new Webpack.HotModuleReplacementPlugin()]
-
 };
 
 module.exports = config;

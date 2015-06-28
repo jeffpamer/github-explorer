@@ -8,13 +8,15 @@ var repositoryListItem = React.createClass({
     },
 
     renderMetaItem: function(icon, dataPoint) {
-        return <div className="metaItem">
+        return this.props.sort !== dataPoint ? null :
+        <div className="metaItem">
             <span className={`octicon octicon-${icon}`}></span>
             <span className="dataPoint">{this.props[dataPoint]}</span>
         </div>
     },
 
     render: function() {
+        window.console.log(this.props.activeRepo);
         var className = this.props.activeRepo === this.props.name ? 'active' : '';
         return <li className={className} onClick={this.onClick}>
             <h3>{this.props.name}</h3>
@@ -31,6 +33,7 @@ var repositoryListItem = React.createClass({
 
 module.exports = branch(repositoryListItem, {
     cursors: {
-        activeRepo: ['ui', 'repo']
+        activeRepo: ['ui', 'repo'],
+        sort: ['ui', 'sort'],
     }
 });
