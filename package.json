@@ -7,13 +7,6 @@
     "test": "mocha --compilers .:tests/compiler.js tests/*-test.js",
     "start": "node server"
   },
-  "jest": {
-    "scriptPreprocessor": "<rootDir>/support/preprocessor.js",
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react",
-      "<rootDir>/node_modules/baobab"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeffpamer/github-explorer.git"

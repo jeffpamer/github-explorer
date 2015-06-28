@@ -5,12 +5,8 @@ var buildPath = path.resolve(__dirname, 'public', 'build');
 var mainPath = path.resolve(__dirname, 'app', 'main.js');
 
 var config = {
-
   devtool: 'eval',
-  entry: [
-    'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
-    mainPath],
+  entry: [mainPath],
   output: {
     path: buildPath,
     filename: 'bundle.js',
