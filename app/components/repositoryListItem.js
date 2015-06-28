@@ -16,7 +16,6 @@ var repositoryListItem = React.createClass({
     },
 
     render: function() {
-        window.console.log(this.props.activeRepo);
         var className = this.props.activeRepo === this.props.name ? 'active' : '';
         return <li className={className} onClick={this.onClick}>
             <h3>{this.props.name}</h3>
