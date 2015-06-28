@@ -4,8 +4,15 @@
   "description": "Browse an organizations github projects and recent commits",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
+    "test": "mocha --compilers .:tests/compiler.js tests/*-test.js",
     "start": "node server"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/support/preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/baobab"
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,8 +29,13 @@
     "babel-core": "^5.6.15",
     "babel-loader": "^5.2.2",
     "css-loader": "^0.15.1",
+    "jest-cli": "^0.4.13",
+    "jsdom": "^5.4.3",
+    "mocha": "^2.2.5",
+    "mocha-jsdom": "^0.5.0",
     "node-libs-browser": "^0.5.2",
     "node-sass": "^3.2.0",
+    "react-tools": "^0.13.3",
     "sass-loader": "^1.0.2",
     "style-loader": "^0.12.3",
     "webpack": "^1.9.13",
