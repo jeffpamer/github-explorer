@@ -39,6 +39,7 @@
     "baobab-react": "^0.1.1",
     "http-proxy": "^1.11.1",
     "moment": "^2.10.3",
+    "node-sass": "^3.2.0",
     "ramda": "^0.15.1",
     "react": "^0.13.3",
     "xr": "^0.1.10"
